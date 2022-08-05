@@ -45,4 +45,15 @@
     define('SENHA','x122sooh9983z6dy');
     define('BANCO','iz0kffffflhvreu9');
   }
+~~~
+* Para configurar o php mailer, basta colocar um e-mail valido
+~~~PHP
+ $mail->
+        $mail->Host       = 'smtp.gmail.com';                   //definindo SMTP server de envio
+        $mail->SMTPAuth   = true;                                   
+        $mail->Username   = 'email@gmail.com';                     //login do email 
+        $mail->Password   = 'password';                               //senha de app
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+        $mail->Port       = 465;
+~~~
 
