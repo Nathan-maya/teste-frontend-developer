@@ -18,8 +18,8 @@
 * Após instalar o Xamp, no Disco local(C:), na pasta htdocs, crie seu projeto.
   >C:\xampp\htdocs\meuprojeto
 * No terminal, Clone o projeto:
-```git clone https://github.com/Nathan-maya/landingpagephp.git```
->C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/landingpagephp.git ```
+```git clone https://github.com/Nathan-maya/teste-frontend-developer.git```
+>C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git ```
 * Execute o Xamp(WampServer) e start o Apache e MySQL .
 * Abrir o phpmyadmin no localhost e importar o arquivo: 
   >cliente.sql
