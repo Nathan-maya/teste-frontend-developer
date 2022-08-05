@@ -28,7 +28,7 @@
 * Dentro do projeto, na pasta class, abra config.php
 * Caso não esteja rodando em servidor local, altere a variável $modo='producao' e realize as alteracoes necessárias.
 ~~~PHP
-```<?php
+<?php
   //Configuração do banco de dados
 
   $modo='producao';
@@ -45,5 +45,4 @@
     define('SENHA','x122sooh9983z6dy');
     define('BANCO','iz0kffffflhvreu9');
   }
-```
 
