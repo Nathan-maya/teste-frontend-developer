@@ -20,6 +20,10 @@
 * No terminal, Clone o projeto:
 ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git```
 >C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git ```
+* Há dois branch, master e melhoria(deploy no heroku). Para alternar digite:
+  >git checkout master
+  ou
+  >git checkout melhoria
 * Execute o Xamp(WampServer) e start o Apache e MySQL .
 * Abrir o phpmyadmin no localhost e importar o arquivo: 
   >cliente.sql
