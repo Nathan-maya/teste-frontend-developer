@@ -14,10 +14,10 @@ p
 
 .ring-bg
   position: fixed
-  z-index: 999
   width: 100%
   height: 100%
   background: variables.$primary-color
+  z-index: 2000
 .ring
   position: absolute
   top: 50%
@@ -84,7 +84,12 @@ p
   animation: spin 2s linear infinite
 
 .superinfo-bg
+  position: fixed
+  width: 100%
   background: variables.$primary-color
+  z-index: 100
+  padding-top: 20px
+  padding-bottom: 20px
 
 .superinfo
   font-weight: 400
@@ -92,18 +97,21 @@ p
   margin: 0 auto
   display: flex
   justify-content: space-between
-  padding-top: 10px
 
   p,a
     margin: 0 10px 10px 10px
     color: variables.$text-color
 .menu-bg
+  position: fixed
+  width: 100%
+  top: 60px
+  z-index: 100
   background: variables.$secundary-color
 
 .menu
   max-width: variables.$container-width
   margin: 0 auto
-  padding: 20px 0
+  padding: 10px 0
   display: flex
   flex-wrap: wrap
   justify-content: space-between
@@ -115,40 +123,20 @@ p
     font-weight: bold
     margin: 0 10px
 
-  &-nav
-    ul
-      display: flex
-      flex-wrap: wrap
-
-      li
-        a
-          font-size: 1.25rem
-          display: block
-          padding: 10px
-          color: variables.$text-color
-          position: relative
-
-        a::after
-          position: absolute
-          content: ""
-          display: block
-          background: variables.$text-color
-          text-align: center
-          height: 3px
-          width: 0
-          bottom: 0
-          left: 50%
-          transition-duration: 0.6s
-        a:hover::after
-          width: 100%
-          left: 0
+.menu-number
+  background: variables.$text-color
+  border-radius: 5px
+  font-weight: bold
+  margin-right: 10px
+  padding: 10px 20px 10px 20px
+  color: #707070
 
 .headline-bg
   background: variables.$secundary-color
 .headline
   max-width: variables.$container-width
   margin: 0 auto
-  padding: 20px 0 80px 0
+  padding: 154px 0 80px 0
   display: flex
   flex-wrap: wrap
 
@@ -188,7 +176,7 @@ p
       margin-bottom: 20px
       font-size: 2rem
       font-weight: 900
-    a
+    .btn
       color: variables.$text-color
       text-align: center
       margin: 20px 0 20px 0
@@ -197,7 +185,10 @@ p
       padding: 10px 30px
       background: variables.$primary-color
       border-radius: 5px
-    a:hover
+      border: none
+      transition: 0.5s
+      cursor: pointer
+    .btn:hover
       color: variables.$primary-color
       background: #000
 
@@ -252,6 +243,39 @@ p
 
       textarea:focus
         border: 2px solid variables.$primary-color
+      #limitMsg
+        position: absolute
+        top: 135px
+        right: 20px
+        font-size: 0.75rem
+        color: #808080
+
+// Adicionando erro
+.erro-geral
+  background: variables.$primary-color
+  color: white
+  font-weight: bold
+  padding: 20px
+  border-radius: 5px
+  margin-bottom: 15px
+
+.erro-input
+  border: 1px solid variables.$primary-color
+
+.erro
+  color: variables.$primary-color
+  font-weight: bold
+  font-size: 14px
+  margin-top: 10px
+
+.sucesso
+  background: #2ac874
+  color: white
+  font-weight: bold
+  padding: 20px
+  border-radius: 5px
+  margin-bottom: 15px
+
 .sobre
   max-width: variables.$container-width
   margin: 0 auto
@@ -408,8 +432,10 @@ p
       font-size: 3.5rem
       font-weight: 900
       margin-bottom: 20px
+      color: variables.$text-color
     p
       font-size: 1.125rem
+      color: variables.$text-color
   &-acao
     border-radius: 5px
     background: #fff
@@ -502,6 +528,8 @@ p
       &-btn
         padding: 10px 40px
 
+// Media ate 720
+
 @media screen and (max-width: 720px)
   .headline
     &-body
@@ -512,7 +540,6 @@ p
       &-title
         font-size: 1.75rem
         line-height: 2.625rem
-    &-contForm
     &-form
       &-title
         font-size: 1.25rem
@@ -525,6 +552,8 @@ p
           font-size: 0.75rem
         &-label
           font-size: 0.75rem
+        #limitMsg
+          top: 80px
   .sobre
     justify-content: space-around
     &-container
@@ -551,10 +580,11 @@ p
       padding: 40px 10px 40px 10px
       &-btn
         font-size: 1rem
+
+// Media ate 560px
+
 @media screen and (max-width: 560px)
-  .superinfo
-    a
-      display: none
+
   .headline
     flex-direction: column
     justify-content: center
