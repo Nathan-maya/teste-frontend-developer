@@ -644,12 +644,9 @@ p {
   }
 }
 @media screen and (max-width: 560px) {
-<<<<<<< Updated upstream
-=======
   .superinfo a {
     display: none;
   }
->>>>>>> Stashed changes
   .headline {
     flex-direction: column;
     justify-content: center;
