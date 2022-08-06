@@ -75,6 +75,23 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
     }
   }
 }
+ 
+$captcha = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : null;
+ 
+if(!is_null($captcha)){
+	$res = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpklIhAAAAAL2vuw8agNA4mkK_5--jkmHszDUY
+  &response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']));
+	if($res->success === true){
+		//CAPTCHA validado!!!
+		echo 'Tudo certo =)';
+	}
+	else{
+		echo 'Erro ao validar o captcha!!!';
+	}
+}
+else{
+	echo 'Captcha não preenchido!';
+}
 ?>
 
 <!DOCTYPE html>
@@ -84,6 +101,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -412,7 +430,6 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
   <script>
     $("#celular").mask("(00)00000-0000")
   </script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>
