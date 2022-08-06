@@ -218,7 +218,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
                                 echo $cliente->erro["erro_mensagem"];
                               } ?></div>
           </div>
-
+          <div class="g-recaptcha" data-sitekey="6LfpklIhAAAAAD-8g09oTDSE8FtGyO__8gq6tFef"></div>
           <button class="btn" type="submit">Carregar</button>
         </form>
       </div>
@@ -412,6 +412,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])
   <script>
     $("#celular").mask("(00)00000-0000")
   </script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>

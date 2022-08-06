@@ -1,7 +1,7 @@
 <?php
   //Configuração do banco de dados
 
-  $modo='local';
+  $modo='producao';
 
   if($modo =='local'){
     define('SERVIDOR','localhost');
