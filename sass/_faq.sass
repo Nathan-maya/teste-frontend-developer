@@ -1,0 +1,65 @@
+@use 'variables'
+.faq
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  align-items: center
+  justify-content: center
+  padding: 60px 100px 80px 100px
+
+  &-title
+    font-size: 3rem
+    line-height: 4.5rem
+    font-weight: 900
+    margin-bottom: 50px
+  &-acordion
+    max-width: 100%
+
+    &-content
+      position: relative
+      margin: 10px 20px
+      &-label
+        position: relative
+        padding: 10px
+        background: variables.$primary-color
+        color: variables.$text-color
+        cursor: pointer
+        border-radius: 5px
+        padding: 15px 0 15px 30px
+
+      &-label::before
+        content: '+'
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        font-size: 1.5rem
+        font-weight: bold
+
+      &.active &-label::before
+        content: "-"
+
+      &-text
+        position: relative
+        background: variables.$secundary-color
+        color: variables.$text-color
+        height: 0
+        overflow: hidden
+        transition: 0.5s
+        overflow-y: auto
+
+      &.active &-text
+        height: 150px
+        padding: 20px
+
+@media screen and (max-width: 980px)
+  .faq-acordion-content-label
+    padding: 15px 60px 15px 30px
+
+@media screen and (max-width: 720px)
+  .faq
+    padding: 60px 50px 80px 50px
+    &-title
+      font-size: 1.75rem
+@media screen and (max-width: 560px)
