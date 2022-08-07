@@ -1,0 +1,92 @@
+@use 'variables'
+
+.chamada-bg
+  background: variables.$secundary-color
+.chamada
+  max-width: variables.$container-width
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  padding: 80px 10px 80px 10px
+
+  &-text
+    flex: 1 1 460px
+    max-width: 100%
+    max-height: 100%
+    padding: 50px 60px 0 10px
+    h2
+      font-size: 3.5rem
+      font-weight: 900
+      margin-bottom: 20px
+      color: variables.$text-color
+    p
+      font-size: 1.125rem
+      color: variables.$text-color
+  &-acao
+    border-radius: 5px
+    background: #fff
+    padding: 40px 60px 40px 60px
+    flex: 1 1 460px
+    text-align: center
+
+    &-descricao
+      margin-bottom: 40px
+
+    &-btn
+      color: variables.$text-color
+      font-size: 1.25rem
+      font-weight: 900
+      padding: 10px 80px
+      background: variables.$primary-color
+      border-radius: 5px
+      transition: 0.5s
+    &-btn:hover
+      color: variables.$primary-color
+      background: #000
+
+    &-contato
+      padding: 0 10px 0 10px
+      font-size: 0.825rem
+      margin-top: 20px
+@media screen and (max-width: 980px)
+  .chamada
+    &-text
+      flex: 1 1 340px
+      h2
+        font-size: 2.25rem
+    &-acao
+      flex: 1 1 340px
+      padding: 40px 30px 40px 30px
+      &-btn
+        padding: 10px 40px
+@media screen and (max-width: 720px)
+
+  .chamada
+    padding: 40px 10px 40px 10px
+    &-text
+      flex: 1 1 250px
+      padding: 10px 60px 0 10px
+    &-acao
+      flex: 1 1 250px
+      padding: 40px 10px 40px 10px
+      &-btn
+        font-size: 1rem
+@media screen and (max-width: 560px)
+
+  .chamada
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &-text
+      flex: 1 1 100%
+      margin-bottom: 40px
+      text-align: center
+      padding: 10px 0 0 10px
+      h2
+        font-size: 1.75rem
+      p
+        font-size: 1rem
+        color: variables.$text-color
+
+    &-acao
+      flex: 1 1 100%

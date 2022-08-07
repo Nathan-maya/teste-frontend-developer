@@ -1,0 +1,54 @@
+@use 'variables'
+
+.sobre
+  max-width: variables.$container-width
+  margin: 0 auto
+  padding: 60px 0 40px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  &-container
+    //Imagens com 50% do conteiner 
+    margin: 0 10px
+    max-width: 460px
+    max-height: 300px
+    &-img
+      max-width: 100%
+      max-height: 100%
+      border-radius: 5px
+
+    &-title
+      margin: 40px 0 20px 30px
+      font-size: 3rem
+      line-height: 4.5rem
+      font-weight: 900
+    &-text
+      margin-left: 30px
+      margin-bottom: 20px
+      letter-spacing: 0.1rem
+      line-height: 24px
+
+@media screen and (max-width: 980px)
+  .sobre
+    &-container
+      max-width: 330px
+  .servicos
+    h2
+      margin: 60px 0 30px 0
+    &-vantagens
+      &-body-text
+        width: 600px
+    &-chamada
+      margin-top: 30px
+
+@media screen and (max-width: 720px)
+  .sobre
+    justify-content: space-around
+    &-container
+      width: 300px
+      &-title
+        margin: 0 auto
+        font-size: 1.75rem
+      &-text
+        margin: 0 auto

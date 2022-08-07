@@ -13,11 +13,13 @@
 * Necessário instalar um servidor web e o banco de dados MySQL, por exemplo, o Xamp.
 * Em necessidade de estilizar a página, instalar o pre-compilador sass:
   > npm install -g sass
+* No terminal, execute:
+  >sass --watch sass/styles.sass:css/styles.css
 
 ## Como rodar aplicação
 * Após instalar o Xamp, no Disco local(C:), na pasta htdocs, crie seu projeto.
   >C:\xampp\htdocs\meuprojeto
-* No terminal, Clone o projeto:
+* No terminal, clone o projeto:
 ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git```
 >C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git ```
 * Há dois branch, master e melhoria(deploy no heroku). Para alternar digite:
@@ -30,7 +32,7 @@
 * Abrir no navegador:
   >[localhost](http://localhost/)/meuprojeto
 * Dentro do projeto, na pasta class, abra config.php
-* Caso não esteja rodando em servidor local, altere a variável $modo='producao' e realize as alteracoes necessárias.
+* Caso não esteja rodando em servidor local, altere a variável $modo='producao' e realize as alterações necessárias.
 ~~~PHP
 <?php
   //Configuração do banco de dados
