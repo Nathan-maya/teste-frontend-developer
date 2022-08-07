@@ -275,6 +275,15 @@ p {
   border-right: 2px solid #F57F17;
   letter-spacing: 0.1rem;
 }
+.headline-form-group-input.active ~ .headline-form-group-label {
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65rem;
+  padding: 0 10px;
+  background: #FCF8F2;
+  border-left: 2px solid #F57F17;
+  border-right: 2px solid #F57F17;
+  letter-spacing: 0.1rem;
+}
 .headline-form-group-input:focus {
   border: 2px solid #F57F17;
 }
@@ -780,6 +789,7 @@ p {
   }
   .chamada-text p {
     font-size: 1rem;
+    color: #FCF8F2;
   }
   .chamada-acao {
     flex: 1 1 100%;

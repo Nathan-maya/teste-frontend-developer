@@ -257,6 +257,15 @@ p
         border-right: 2px solid variables.$primary-color
         letter-spacing: 0.1rem
 
+      &-input.active ~ &-label
+        transform: translateX(10px) translateY(-7px)
+        font-size: 0.65rem
+        padding: 0 10px
+        background: variables.$text-color
+        border-left: 2px solid variables.$primary-color
+        border-right: 2px solid variables.$primary-color
+        letter-spacing: 0.1rem
+
       &-input:focus
         border: 2px solid variables.$primary-color
 
@@ -560,7 +569,6 @@ p
       &-btn
         padding: 10px 40px
 
-
 // Media ate 720
 
 @media screen and (max-width: 720px)
@@ -706,6 +714,7 @@ p
         font-size: 1.75rem
       p
         font-size: 1rem
+        color: variables.$text-color
 
     &-acao
       flex: 1 1 100%
