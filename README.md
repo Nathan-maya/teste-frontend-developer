@@ -19,7 +19,7 @@
 ## Como rodar aplicação
 * Após instalar o Xamp, no Disco local(C:), na pasta htdocs, crie seu projeto.
   >C:\xampp\htdocs\meuprojeto
-* No terminal, Clone o projeto:
+* No terminal, clone o projeto:
 ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git```
 >C:\xampp\htdocs\meuprojeto> ```git clone https://github.com/Nathan-maya/teste-frontend-developer.git ```
 * Há dois branch, master e melhoria(deploy no heroku). Para alternar digite:
