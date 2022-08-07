@@ -142,7 +142,6 @@ p {
   font-weight: bold;
   margin-right: 10px;
   padding: 10px 20px 10px 20px;
-  color: #707070;
 }
 
 .headline-bg {
@@ -233,6 +232,15 @@ p {
   font-weight: bold;
 }
 .headline-form-group-input:valid ~ .headline-form-group-label, .headline-form-group-input:focus ~ .headline-form-group-label {
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65rem;
+  padding: 0 10px;
+  background: #FCF8F2;
+  border-left: 2px solid #F57F17;
+  border-right: 2px solid #F57F17;
+  letter-spacing: 0.1rem;
+}
+.headline-form-group-input.active ~ .headline-form-group-label {
   transform: translateX(10px) translateY(-7px);
   font-size: 0.65rem;
   padding: 0 10px;
@@ -687,6 +695,7 @@ p {
   }
   .chamada-text p {
     font-size: 1rem;
+    color: #FCF8F2;
   }
   .chamada-acao {
     flex: 1 1 100%;

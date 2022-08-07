@@ -23,7 +23,7 @@ function scrollSpy() {
         });
       }
     });
-  }, 300);
+  }, 50);
 }
 
 window.addEventListener('scroll', scrollSpy);

@@ -5,6 +5,7 @@ class Formulario extends Crud
 {
 
   protected string $tabela = 'contato';
+
   function __construct(
     public string $nome,
     public string $email,
@@ -20,6 +21,9 @@ class Formulario extends Crud
     if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $this->nome)) {
       $this->erro["erro_nome"] = "Somente permitido letras e espaços em branco!";
     }
+    // if(strlen($this->nome) <=1) {
+    //   $this->erro["erro_nome"] = "Não é permitido espaço vazio!";
+    // }
 
     //Verificar se e-mail é valido
     if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
@@ -31,9 +35,7 @@ class Formulario extends Crud
     if (preg_match($regex, $this->telefone) == false) {
       $this->erro["erro_telefone"] = "O número de telefone está incorreto!";
     } 
-    if(strlen($this->telefone) > 12 && strlen($this->telefone) < 12){
-      $this->erro["erro_telefone"] = "Por favor, insira somente 11 digitos ";
-    }
+
   }
 
   public function insert()
