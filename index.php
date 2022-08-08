@@ -80,12 +80,12 @@ if ($_POST) {
             $mail->Encoding = 'base64';
             $mail->Host       = 'smtp.gmail.com';                     //definindo SMTP server de envio
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'nathan.maia99@gmail.com';                     //login do email 
-            $mail->Password   = 'fnxbogfwrjvjdkid';                               //senha de app
+            $mail->Username   = 'nathan.mrmaia@gmail.com';                     //login do email 
+            $mail->Password   = 'tzocftmvbovmywwm';                               //senha de app
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
             //Recipients
-            $mail->setFrom('nathan.maia99@gmail.com', 'Mensagem do Cliente'); //qm esta mandando email
+            $mail->setFrom('nathan.mrmaia@gmail.com', 'Mensagem do Cliente'); //qm esta mandando email
             $mail->addAddress($email, $nome, 0);     //Enviando para o cliente
             //Content
             $mail->isHTML(true); //CORPO do email com HTML
