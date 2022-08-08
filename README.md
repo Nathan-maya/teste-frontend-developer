@@ -32,7 +32,7 @@
 * Abrir no navegador:
   >[localhost](http://localhost/)/meuprojeto
 * Dentro do projeto, na pasta class, abra config.php
-* Caso esteja rodando em servidor local, altere a variável $modo='producao' e realize as alterações necessárias.
+* Caso esteja rodando em servidor local, altere a variável $modo='producao' para $modo='local'.
 ~~~PHP
 <?php
   //Configuração do banco de dados
