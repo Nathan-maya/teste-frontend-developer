@@ -133,12 +133,12 @@ if ($_POST) {
 
 <body>
   <!-- Preloader -->
-  <!-- <div class="ring-bg">
+  <div class="ring-bg">
     <div class="ring">
       <div class="ring-count" data-target="100"></div>
       <span class="ring-span"></span>
     </div>
-  </div> -->
+  </div>
 
 
   <!-- background dos dados da empresa -->
